@@ -51,5 +51,11 @@ class Chronometer {
 
   split() {
     // ... your code goes here
+
+    // pass return value of getMinutes to computeTwoDigitNumber to get right format
+    const minutes = this.computeTwoDigitNumber(this.getMinutes());
+    const seconds = this.computeTwoDigitNumber(this.getSeconds());
+
+    return `${minutes}:${seconds}`;
   }
 }
